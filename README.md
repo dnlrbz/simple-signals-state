@@ -1,59 +1,56 @@
-# SignalsState
+# Simple Signals State
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+A lightweight, reusable signal-based store for managing lists of items in Angular. No NGRX, no actions, reducers, or effects—just simple, reactive state management using Angular signals.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- 🚀 \*\*No NGRX Required\*\*: No need to learn or configure NGRX.
+- 🧩 \*\*Reusable\*\*: Use at the component or root level.
+- ⚡ \*\*Reactive\*\*: Powered by Angular signals for instant UI updates.
+- 🗂️ \*\*List Management\*\*: Easily load, upsert, and remove items.
+- 🛠️ \*\*No Boilerplate\*\*: No actions, reducers, or effects to write.
+- 💾 \*\*Persistence\*\*: State is automatically synced with \`localStorage\`.
 
-```bash
-ng serve
-```
+## Usage
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+1. **Install dependencies** (Angular 16+ required):
 
-## Code scaffolding
+   ```sh
+   npm install
+   ```
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+2. **Provide a store** for your item type:
 
-```bash
-ng generate component component-name
-```
+   ```typescript
+   import { getStateProvider } from 'src/app/state/signal-state.service';
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+   @NgModule({
+     providers: [
+       getStateProvider('my-items', MY_ITEMS_STORE_TOKEN)
+     ]
+   })
+   export class MyModule {}
+   ```
 
-```bash
-ng generate --help
-```
+3. **Inject and use in your component**:
 
-## Building
+   ```typescript
+   constructor(@Inject(MY_ITEMS_STORE_TOKEN) public store: SignalState<MyItem>) {}
 
-To build the project run:
+   // Load items
+   this.store.loadItems('/api/items');
 
-```bash
-ng build
-```
+   // Upsert or remove items
+   this.store.upsertItem(item);
+   this.store.removeItem(itemId);
+   ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Why?
 
-## Running unit tests
+- **Simple**: Focus on your app, not on store boilerplate.
+- **Flexible**: Use anywhere, for any list of items.
+- **Modern**: Built for Angular signals.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+No NGRX. No complexity. Just signals.
