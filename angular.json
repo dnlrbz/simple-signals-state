@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "signals-state": {
+    "simple-signals-state": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/signals-state",
+            "outputPath": "dist/simple-signals-state",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "signals-state:build:production"
+              "buildTarget": "simple-signals-state:build:production"
             },
             "development": {
-              "buildTarget": "signals-state:build:development"
+              "buildTarget": "simple-signals-state:build:development"
             }
           },
           "defaultConfiguration": "development"
