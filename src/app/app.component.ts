@@ -56,9 +56,9 @@ export class AppComponent {
   private readonly productsState = inject(PRODUCT_STATE);
 
   readonly isCartOpen = signal(false);
-  readonly products: Signal<Product[]> = this.productsState.items;
-  readonly productsLoading: Signal<boolean> = this.productsState.loading;
-  readonly cartItems: Signal<CartItem[]> = this.cartState.items;
+  readonly products = this.productsState.items;
+  readonly productsLoading = this.productsState.loading;
+  readonly cartItems = this.cartState.items;
 
   constructor() {
     this.productsState.loadItems('/products.json');
