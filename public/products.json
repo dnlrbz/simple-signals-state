@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "price": 499,
+    "imageUrl": "https://www.apple.com/newsroom/images/product/airpods/standard/apple_airpods-max_hero_12082020_big.jpg.large_2x.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone",
+    "price": 1200,
+    "imageUrl": "https://static1.pocketlintimages.com/wordpress/wp-content/uploads/2024/09/iphone-16-pro-square.jpg?q=49&fit=contain&w=480&h=480&dpr=2"
+  },
+  {
+    "id": 3,
+    "name": "Gaming Laptop",
+    "price": 2300,
+    "imageUrl": "https://www.digitaltrends.com/wp-content/uploads/2024/10/Acer-Nitro-16-gaming-laptop.jpg?fit=1200%2C900&p=1"
+  },
+  {
+    "id": 4,
+    "name": "Keyboard",
+    "price": 89.99,
+    "imageUrl": "https://www.itech.ph/wp-content/uploads/2023/09/Logitech-Pebble-Keys-2-K380S-Slim-Minimalist-Bluetooth-Keyboard-with-Customizable-Keys-Tonal-Graphite-jpg.webp"
+  },
+  {
+    "id": 5,
+    "name": "Watch",
+    "price": 8999,
+    "imageUrl": "https://www.hodinarstvibechyne.cz/res/crc-107760729/storage/2048x2048/v9-m128239-0005-drp-upright-bba-with-shadow.webp"
+  }
+]
